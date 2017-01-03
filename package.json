@@ -1,0 +1,45 @@
+{
+  "name": "primise-process",
+  "version": "1.0.0",
+  "description": "Child process that uses Q",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiroaki-yamamoto/promise-process.git"
+  },
+  "keywords": [
+    "child_process",
+    "q",
+    "promise"
+  ],
+  "author": {
+    "nane": "Hiroaki Yamamoto",
+    "email": "hiroaki@hysoftware.net",
+    "url": "https://hysoftware.net/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiroaki-yamamoto/promise-process/issues"
+  },
+  "homepage": "https://github.com/hiroaki-yamamoto/promise-process#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.12.2",
+    "eslint-config-google": "^0.7.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "install": "^0.8.4",
+    "mock-require": "^2.0.0",
+    "sinon": "^1.17.7"
+  },
+  "dependencies": {
+    "q": "^1.4.1"
+  }
+}

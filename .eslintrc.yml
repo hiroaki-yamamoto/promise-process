@@ -1,0 +1,9 @@
+extends: google
+ecmaVersion: 6
+rules:
+  strict:
+    - error
+    - function
+env:
+  es6: true
+  node: true
