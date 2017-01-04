@@ -1,7 +1,7 @@
 const childProcess = require('child_process');
 const merge = require('merge');
 /**
- * Run command and returns a promise object of the process.
+ * Execute commands and returns a promise object of the process.
  * Note that args parameter works only when the command is a single command,
  * and the command runs in the shell-mode. By default the command runs in
  * shell-mode and you need to set {'shell': false} to disable shell mode.
