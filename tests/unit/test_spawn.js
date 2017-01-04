@@ -3,7 +3,7 @@
   const expect = require('chai').expect;
   const mock = require('mock-require');
   const sinon = require('sinon');
-  let promiseProcess = require('../../index');
+  let promiseProcess = require('../../lib/process');
 
   describe('Spawn invokation check', () => {
     let spawn;
