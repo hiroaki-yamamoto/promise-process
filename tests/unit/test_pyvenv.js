@@ -40,6 +40,32 @@
       });
     });
 
+    describe('Multiple Command invokation', () => {
+      const testCommand = [
+        'jugemjugemgokohnosurikire',
+        'kayjaresuygyo', 'soygyomatsu',
+      ];
+      let ret;
+      beforeEach(() => {
+        let fs = {'existsSync': sinon.stub().returns(false)};
+        fs.existsSync.onFirstCall().returns(true);
+        fs.existsSync.onSecondCall().returns(true);
+        mock('fs', fs);
+        pyvenv = mock.reRequire('../../lib/pyvenv');
+        ret = pyvenv(testCommand);
+      });
+      it('Should call processCall with proper args.', () => {
+        expect(promiseProcessMock.calledOnce).to.be.true;
+        expect(promiseProcessMock.calledWithExactly([].concat(
+          path.join(process.cwd(), 'venv', 'bin', 'activate'),
+          testCommand, 'deactivate'
+        )));
+      });
+      it('The return value should be an instance of promise', () => {
+        expect(ret).to.eql({});
+      });
+    });
+
     describe('Command invokation with additional pyvenv', () => {
       let ret;
       beforeEach(() => {
@@ -61,6 +87,7 @@
         expect(ret).to.eql({});
       });
     });
+
     describe('Command invokation with overwriting pyvenv', () => {
       let ret;
       beforeEach(() => {
