@@ -42,3 +42,5 @@ deploy:
       Yc1vvZWU6cItsaVaXn95gpgGG7q3caKmWH6tLcoWAkeIRQEXg33Q11GYt4fzHHAhn211aK3f
       jRKo7HpcwevVMffEe2LcMtXmVGUbP1Fbj+vspFvwEU7rwqsYN0OIxHtBYqxWsQhVCrGOkbo8
       evcTrxEwDI2ts458XG1QQLsyjLv1CI92f6E=
+    on:
+      tags: true
