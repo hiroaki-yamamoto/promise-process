@@ -4,4 +4,5 @@ node_js:
   - '6'
   - '7'
 after_success:
-  - "cat ./coverage/lcov.info | $(npm bin)/coveralls"
+  - "$(npm bin)/coveralls < ./coverage/lcov.info"
+  - "$(npm bin)/codeclimate-test-reporter < ./coverage/lcov.info"
