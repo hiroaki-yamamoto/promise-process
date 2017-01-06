@@ -11,7 +11,7 @@ after_success:
   - "$(npm bin)/coveralls < ./coverage/lcov.info"
   - "$(npm bin)/codeclimate-test-reporter < ./coverage/lcov.info"
 before_deploy:
-  - "git archive --format tar.gz -o ${HOME}/simple-process-${TRAVIS_TAG}.tar.gz ${TRAVIS_TAG}"
+  - "git archive --format tar.gz -o ${HOME}/simple-process.tar.gz ${TRAVIS_BRANCH}"
 deploy:
   - provider: npm
     skip_cleanup: true
@@ -29,7 +29,7 @@ deploy:
     on:
       tags: true
   - provider: releases
-    file: ${HOME}/simple-process-${TRAVIS_TAG}.tar.gz
+    file: ${HOME}/simple-process.tar.gz
     skip_cleanup: true
     api_key: >-
       uotXxkUGwm+iM7ItGnNipDeZz6Iu8uxIKnD/H8G3HN55+545CvCFWBTUCsu4G0GmHZsLuWS9
