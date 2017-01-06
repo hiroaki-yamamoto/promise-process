@@ -10,7 +10,7 @@ after_success:
   - "$(npm bin)/coveralls < ./coverage/lcov.info"
   - "$(npm bin)/codeclimate-test-reporter < ./coverage/lcov.info"
 before_deploy:
-  - "[ -n "${TRAVIS_TAG}" ] && git archive --format tar.gz --prefix=simple-process-${TRAVIS_TAG} -o ${HOME}/simple-process-${TRAVIS_TAG}.tar.gz ${TRAVIS_TAG}"
+  - "[ -n \"${TRAVIS_TAG}\" ] && git archive --format tar.gz --prefix=simple-process-${TRAVIS_TAG} -o ${HOME}/simple-process-${TRAVIS_TAG}.tar.gz ${TRAVIS_TAG}"
 deploy:
   - provider: npm
     skip_cleanup: true
