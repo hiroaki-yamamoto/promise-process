@@ -15,6 +15,7 @@ before_deploy:
 deploy:
   - provider: npm
     skip_cleanup: true
+    email: "hiroaki@hysoftware.net"
     api_key: >-
       RxXH0gpVyiz0BfySFg2RGK4PPZuPKzcRwmHktYitvdXW9NAuo1BqL/nHtS6QPNxd9JOWnxgh
       8+nIHNkyLW4wgLNztA23PUhSFMYRAu7NQv66YfmamDAywHvRwiq0Dh7gQI9hS6X7t+x3EV9o
