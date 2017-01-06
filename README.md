@@ -1,5 +1,10 @@
 # Promise object for child_process.spawn
 
+[![CI]][CILink]
+
+[CI]: https://travis-ci.org/hiroaki-yamamoto/simple-process.svg?branch=master
+[CILink]: https://travis-ci.org/hiroaki-yamamoto/simple-process
+
 ## What This?
 This script generates `Promise` Object of `child_process.spawn`.
 
