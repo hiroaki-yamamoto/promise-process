@@ -27,6 +27,7 @@
   "homepage": "https://github.com/hiroaki-yamamoto/simple-process#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
     "eslint": "^3.12.2",
     "eslint-config-google": "^0.7.1",
     "gulp": "^3.9.1",
