@@ -1,6 +1,6 @@
 {
   "name": "promise-process",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Child process that uses Q",
   "main": "index.js",
   "scripts": {
