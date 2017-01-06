@@ -173,6 +173,7 @@ don't forget to add your name to `contributors` list in [package.json].
 
 [github issues tracker]: https://github.com/hiroaki-yamamoto/promise-process/issues
 [Pull requests]: https://github.com/hiroaki-yamamoto/promise-process/pulls
+[package.json]: package.json
 
 ## License (MIT License)
 Copyright 2017- Hiroaki Yamamoto
