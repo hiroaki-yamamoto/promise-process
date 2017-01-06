@@ -17,16 +17,16 @@ deploy:
     email: "hiroaki@hysoftware.net"
     api_key:
       secure: >-
-        RxXH0gpVyiz0BfySFg2RGK4PPZuPKzcRwmHktYitvdXW9NAuo1BqL/nHtS6QPNxd9JOWnx
-        gh8+nIHNkyLW4wgLNztA23PUhSFMYRAu7NQv66YfmamDAywHvRwiq0Dh7gQI9hS6X7t+x3
-        EV9opSUqBrBzqSHLgtrVjSnBy4XSY+tu9fl7FkNMH6lnfFfTNAJLDo/QhE3MOEUWc2AXLR
-        kIhaKaW+MRKTdk7c1bnhIaJIxZfprFIKLhmfut2qkYb839bgXlusrAbfKdkfp+EHYnRfTa
-        +jfJbAmTmx4/NlK+dbMs4u/rj/eYokCq1dtoGkOZSdN6mxGzQzg4xiuRa7xU2LjyyJPjPL
-        vS74JzlpM0QaksJqA5AD4Ts1Y1+QU5tpX7UXzsebPBPf+QFixaL4pirZd6cxBg3m1Mgz6b
-        tfiPtmRdQl8FzJudr8Uti9V6xlUzdQxMOxkt8nJylgoxhbsFEfzSBVW7lz9xUeyRnLo0S+
-        atulJporu2Cd3iA3WxQaaUBSosBhf8DtYBQ9oqeaQ7bUaBPp92MC/VhjPyMFliBVgjD41t
-        Yum2L8ow3T10sOAX1EpqefhCRj03FtObkvADzEMt3TQLW9D7rjnuYHkzqWCX1TtSOY8gHd
-        5DHIWAFKGLf2ikoejBhbk6agGWuOCAqevblDkKbB9I56woHa4lNAw=
+        Ns5FahYZQnUzi6dJasMhFDuDs8uex7d+oba21yct11Qj11sG/PSawdgSGUDw318pNMTyYe
+        yEikk4Y4+q6r5Wkdxot4h6c1SeE+AB6nViA5Jwozyy6dxofA7X/1jUTO1m9HIudTcu2Gh9
+        H+DsDfwxGOX29GBdVV3iH52vWN8KcD9lKhg5yGumKjzMr6c9HsCJqcE0nVFvNg/RSih3vt
+        BXgR56V1jXKHc09UhCR2ha9ahfSoOzBFHg0CitUXTc2t2f9ozCCtzqAkQ7hshLmHRWR/Lt
+        YwYvXNly24DcQg19HR8DpX9WxS973de40xvZeNZARQKqb9SMIcejFJWgPuwpDAWMd8LwAN
+        DNSWCGKjZneLv2N4EKtbhiV6/meH2Hor90aZ5uxqNVc0mylMj3vn3du1dcqrbTFHATG6/L
+        bqeFA9G5iijldLwqZc8Uw/Q6a3V/CNk2SK12mQ/RWjxIQgI3w9Xn3+T2Kd5inW7+PnCxj6
+        NdCcPRJipqLaCuM4IIcFfqr1J0dIbPWKDrYPZW/1i7KrwKPGC78VY/JQmb8/cQS7j/AtAL
+        47dIPdtF1F6gXBnE62IkJclyBX4c16bHxDOYF81Z3zi/ahT4MQP/iRx4gZqZDxf+IzQ89P
+        hVQZou4aVrEkeEefnjrdYt/ZWUy+DZ1JbBEnmnj0yX+N37UUCt4Qg=
     on:
       tags: true
   - provider: releases
