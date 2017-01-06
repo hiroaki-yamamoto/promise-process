@@ -31,6 +31,7 @@ deploy:
   - provider: releases
     file: ${HOME}/simple-process.tar.gz
     skip_cleanup: true
+    overwrite: true
     api_key: >-
       uotXxkUGwm+iM7ItGnNipDeZz6Iu8uxIKnD/H8G3HN55+545CvCFWBTUCsu4G0GmHZsLuWS9
       na8ZGV2E/0S0JDBwc9VVqduWOK7EAHZpvR51OI9lYUINV5lDG7XLRnqfpEaLaGua5GA1XoTn
