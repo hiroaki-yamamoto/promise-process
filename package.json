@@ -1,7 +1,7 @@
 {
   "name": "simple-process",
   "version": "0.0.1",
-  "description": "Child process that uses Q",
+  "description": "Child process that uses Promise Object",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
@@ -12,7 +12,6 @@
   },
   "keywords": [
     "child_process",
-    "q",
     "promise"
   ],
   "author": {
