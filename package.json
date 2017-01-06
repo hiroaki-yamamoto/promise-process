@@ -1,6 +1,6 @@
 {
-  "name": "promise-process",
-  "version": "0.0.0",
+  "name": "simple-process",
+  "version": "0.0.1",
   "description": "Child process that uses Q",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hiroaki-yamamoto/promise-process.git"
+    "url": "git+https://github.com/hiroaki-yamamoto/simple-process.git"
   },
   "keywords": [
     "child_process",
@@ -23,9 +23,9 @@
   "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hiroaki-yamamoto/promise-process/issues"
+    "url": "https://github.com/hiroaki-yamamoto/simple-process/issues"
   },
-  "homepage": "https://github.com/hiroaki-yamamoto/promise-process#readme",
+  "homepage": "https://github.com/hiroaki-yamamoto/simple-process#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.12.2",

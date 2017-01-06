@@ -19,7 +19,7 @@ takes `then` and `catch` approach.
 ## Installation
 There are 2 ways:
 
-* Running `npm install promise-process` tries to get the latest stable version
+* Running `npm install simple-process` tries to get the latest stable version
   and this is the recommended way to get this script.
 * Cloning this repo is the secondary way to use this scipt, but its un-stability
   is the notable point.
@@ -27,13 +27,13 @@ There are 2 ways:
 ## How to use
 
 ### General Purpose
-To run apps, using `promise-process` directly is the most suitable way. i.e.
+To run apps, using `simple-process` directly is the most suitable way. i.e.
 code like this:
 
 ```Javascript
 (() => {
   'use strict';
-  let command = require('promise-process');
+  let command = require('simple-process');
   module.exports = () => {
     // Single command use
     command('ls --color=auto').then((result) => {
@@ -67,13 +67,13 @@ code like this:
 
 ### Python with pyvenv
 If you have python apps and want to run them in virtual environment, there's a
-suitable wrapper in this script: `promise-process.pyvenv`. To use it, code
+suitable wrapper in this script: `simple-process.pyvenv`. To use it, code
 like this:
 
 ```Javascript
 (() => {
   'use strict';
-  let command = require('promise-process');
+  let command = require('simple-process');
   module.exports = () => {
     // Single command
     command.pyvnenv('hello.py').then((result) => {
@@ -127,17 +127,17 @@ like this:
 
 Note that you can't run pyvenv function with non-shell mode because `pyvenv`
 doesn't provide any options to control `child_process.spawn` while
-`promise-process` function provides. i.e. `pyvenv` always run in shell-mode.
+`simple-process` function provides. i.e. `pyvenv` always run in shell-mode.
 
 ### Ruby with bundler
 
 If you have ruby apps and want to run them in bundler's environment, there's a
-suitable wrapper in this script: `promise-process.bundleExec`. To use it, code
+suitable wrapper in this script: `simple-process.bundleExec`. To use it, code
 like this:
 
 ```Javascript
 'use strict';
-let command = require('promise-process');
+let command = require('simple-process');
 module.exports = () => {
   // Single command
   command.bundleExec('hello.rb').then((result) => {
@@ -171,8 +171,8 @@ If you found bugs, feel free to create an issue at [github issues tracker],
 but sending [Pull requests] is more appreciated. When you send Pull Requests,
 don't forget to add your name to `contributors` list in [package.json].
 
-[github issues tracker]: https://github.com/hiroaki-yamamoto/promise-process/issues
-[Pull requests]: https://github.com/hiroaki-yamamoto/promise-process/pulls
+[github issues tracker]: https://github.com/hiroaki-yamamoto/simple-process/issues
+[Pull requests]: https://github.com/hiroaki-yamamoto/simple-process/pulls
 [package.json]: package.json
 
 ## License (MIT License)
