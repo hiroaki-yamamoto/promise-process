@@ -1,11 +1,15 @@
 # Promise object for child_process.spawn
 
-[![CI]][CILink] [![Cov]][CovLink]
+[![CI]][CILink] [![Cov]][CovLink] [![QA]][QALink]
 
 [CI]: https://travis-ci.org/hiroaki-yamamoto/simple-process.svg?branch=master
 [CILink]: https://travis-ci.org/hiroaki-yamamoto/simple-process
+
 [Cov]: https://coveralls.io/repos/github/hiroaki-yamamoto/simple-process/badge.svg?branch=master
-[Cov]: https://coveralls.io/github/hiroaki-yamamoto/simple-process?branch=master
+[CovLink]: https://coveralls.io/github/hiroaki-yamamoto/simple-process?branch=master
+
+[QA]: https://codeclimate.com/github/hiroaki-yamamoto/simple-process/badges/gpa.svg
+[QALink]: https://codeclimate.com/github/hiroaki-yamamoto/simple-process
 
 ## What This?
 This script generates `Promise` Object of `child_process.spawn`.
