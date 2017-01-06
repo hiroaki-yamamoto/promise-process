@@ -35,7 +35,6 @@
     "gulp-mocha": "^3.0.1",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
-    "install": "^0.8.4",
     "mock-require": "^2.0.0",
     "sinon": "^1.17.7"
   },
