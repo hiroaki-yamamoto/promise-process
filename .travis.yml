@@ -16,33 +16,35 @@ deploy:
   - provider: npm
     skip_cleanup: true
     email: "hiroaki@hysoftware.net"
-    api_key: >-
-      RxXH0gpVyiz0BfySFg2RGK4PPZuPKzcRwmHktYitvdXW9NAuo1BqL/nHtS6QPNxd9JOWnxgh
-      8+nIHNkyLW4wgLNztA23PUhSFMYRAu7NQv66YfmamDAywHvRwiq0Dh7gQI9hS6X7t+x3EV9o
-      pSUqBrBzqSHLgtrVjSnBy4XSY+tu9fl7FkNMH6lnfFfTNAJLDo/QhE3MOEUWc2AXLRkIhaKa
-      W+MRKTdk7c1bnhIaJIxZfprFIKLhmfut2qkYb839bgXlusrAbfKdkfp+EHYnRfTa+jfJbAmT
-      mx4/NlK+dbMs4u/rj/eYokCq1dtoGkOZSdN6mxGzQzg4xiuRa7xU2LjyyJPjPLvS74JzlpM0
-      QaksJqA5AD4Ts1Y1+QU5tpX7UXzsebPBPf+QFixaL4pirZd6cxBg3m1Mgz6btfiPtmRdQl8F
-      zJudr8Uti9V6xlUzdQxMOxkt8nJylgoxhbsFEfzSBVW7lz9xUeyRnLo0S+atulJporu2Cd3i
-      A3WxQaaUBSosBhf8DtYBQ9oqeaQ7bUaBPp92MC/VhjPyMFliBVgjD41tYum2L8ow3T10sOAX
-      1EpqefhCRj03FtObkvADzEMt3TQLW9D7rjnuYHkzqWCX1TtSOY8gHd5DHIWAFKGLf2ikoejB
-      hbk6agGWuOCAqevblDkKbB9I56woHa4lNAw=
+    api_key:
+      secure: >-
+        RxXH0gpVyiz0BfySFg2RGK4PPZuPKzcRwmHktYitvdXW9NAuo1BqL/nHtS6QPNxd9JOWnx
+        gh8+nIHNkyLW4wgLNztA23PUhSFMYRAu7NQv66YfmamDAywHvRwiq0Dh7gQI9hS6X7t+x3
+        EV9opSUqBrBzqSHLgtrVjSnBy4XSY+tu9fl7FkNMH6lnfFfTNAJLDo/QhE3MOEUWc2AXLR
+        kIhaKaW+MRKTdk7c1bnhIaJIxZfprFIKLhmfut2qkYb839bgXlusrAbfKdkfp+EHYnRfTa
+        +jfJbAmTmx4/NlK+dbMs4u/rj/eYokCq1dtoGkOZSdN6mxGzQzg4xiuRa7xU2LjyyJPjPL
+        vS74JzlpM0QaksJqA5AD4Ts1Y1+QU5tpX7UXzsebPBPf+QFixaL4pirZd6cxBg3m1Mgz6b
+        tfiPtmRdQl8FzJudr8Uti9V6xlUzdQxMOxkt8nJylgoxhbsFEfzSBVW7lz9xUeyRnLo0S+
+        atulJporu2Cd3iA3WxQaaUBSosBhf8DtYBQ9oqeaQ7bUaBPp92MC/VhjPyMFliBVgjD41t
+        Yum2L8ow3T10sOAX1EpqefhCRj03FtObkvADzEMt3TQLW9D7rjnuYHkzqWCX1TtSOY8gHd
+        5DHIWAFKGLf2ikoejBhbk6agGWuOCAqevblDkKbB9I56woHa4lNAw=
     on:
       tags: true
   - provider: releases
     file: ${HOME}/simple-process.tar.gz
     skip_cleanup: true
     overwrite: true
-    api_key: >-
-      uotXxkUGwm+iM7ItGnNipDeZz6Iu8uxIKnD/H8G3HN55+545CvCFWBTUCsu4G0GmHZsLuWS9
-      na8ZGV2E/0S0JDBwc9VVqduWOK7EAHZpvR51OI9lYUINV5lDG7XLRnqfpEaLaGua5GA1XoTn
-      q84wFRvZEzzFZr16r+N9WyZaqcZTw4g+BydZ7IjDBGlKpFYuYLVKBofw+NJ34GOFtTUbJFNT
-      bSl86rUIyVcsErzTpRPkZ3HOczc5C4nVNqMTtDJIZjbJRCPG7Wt9FDNlJvCR+A4GOiEHdtWR
-      DhKcnw/jDxlbZ76jEbKo3e8/XTu48YDBtSDe2OFBB4wEuaT5Zw4ayVGYv96XxRLvP3KUF2Xy
-      /MleJtR6636VJ/pAZjUp/KICDyECZIiqT8VxBpX36xJ8+OnkWEz9BhQvTev3t7/TqZ4hdiy8
-      +xxaqvtyQI8rnxlGRO0Q2rBEImG1rX2jvc8kzAjTHoa0/X+teTA0czQ5go898EkNXQnf29Rx
-      Yc1vvZWU6cItsaVaXn95gpgGG7q3caKmWH6tLcoWAkeIRQEXg33Q11GYt4fzHHAhn211aK3f
-      jRKo7HpcwevVMffEe2LcMtXmVGUbP1Fbj+vspFvwEU7rwqsYN0OIxHtBYqxWsQhVCrGOkbo8
-      evcTrxEwDI2ts458XG1QQLsyjLv1CI92f6E=
+    api_key:
+      secure: >-
+        tEr10/n5teIihmq35MjBZpEqmEvniFm2C4Ua7kctXdpocwF9L35emrMTRaAhaNTB/S4Zyz
+        +ZSuBasDaYCjzdWxTrtsDj4ZlTfwKUrR46G9bVLX30nwVEHSYxtnFYWm2CEr3bvyOrEJNd
+        SHiy16aCrzSr0Miko5wOjR61aaTebQ1TUp6UWd+E8Nhcl1W290liieL734YE2KV5t4Xybm
+        /auYlXIidOlucV2GOtS0jP+Bj98V8j+FQMMZB8YbNJoa5R/6Pk1ZH2D6CBs96OACoZDPCj
+        ZKdyv/BdoINZ7l9Vfw+RL7F24GqlCuRmZ4iZyEVf8/+6wcumQjrzJvZrV/tLFLiK+Ku9IH
+        lKpVerPegF9AwzY0zyoZJe4y0wL/AdiqoOaYSe7nBfnXvNJFAZAO6+wgUr0JDsYKGWzH3k
+        5Ko3JFbNagJEtURwTw2dayoOEDh7wTzSjmA5c446ikzVwB1OLWUNtU92QceQxoN1pfEN1b
+        BKtQxliCXiMPjEST00dY0/FH3UWt3e/G5JieAYAkQecIU9zPsRxPfdMS0cpBoRNJQXd4Em
+        nm5Fy2I1+HdooCgZvlx/i9xO+dHienpCSEztDw7i8JnPTSH0612nTMXwVbzn15U+u/3lrx
+        osISG5GqpqzMzENYr3+MOD+rWGYRzFXPGOhy8kBYVllRnHwkSFWBo=
     on:
       tags: true
