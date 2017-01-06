@@ -20,6 +20,7 @@
     "email": "hiroaki@hysoftware.net",
     "url": "https://hysoftware.net/"
   },
+  "contributors": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hiroaki-yamamoto/promise-process/issues"
