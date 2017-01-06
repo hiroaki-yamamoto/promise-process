@@ -14,6 +14,7 @@ before_deploy:
   - "git archive --format tar.gz -o ${HOME}/simple-process-${TRAVIS_TAG}.tar.gz ${TRAVIS_TAG}"
 deploy:
   - provider: npm
+    skip_cleanup: true
     api_key: >-
       RxXH0gpVyiz0BfySFg2RGK4PPZuPKzcRwmHktYitvdXW9NAuo1BqL/nHtS6QPNxd9JOWnxgh
       8+nIHNkyLW4wgLNztA23PUhSFMYRAu7NQv66YfmamDAywHvRwiq0Dh7gQI9hS6X7t+x3EV9o
@@ -28,6 +29,8 @@ deploy:
     on:
       tags: true
   - provider: releases
+    file: ${HOME}/simple-process-${TRAVIS_TAG}.tar.gz
+    skip_cleanup: true
     api_key: >-
       uotXxkUGwm+iM7ItGnNipDeZz6Iu8uxIKnD/H8G3HN55+545CvCFWBTUCsu4G0GmHZsLuWS9
       na8ZGV2E/0S0JDBwc9VVqduWOK7EAHZpvR51OI9lYUINV5lDG7XLRnqfpEaLaGua5GA1XoTn
