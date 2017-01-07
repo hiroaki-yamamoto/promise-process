@@ -70,8 +70,8 @@
       let ret;
       beforeEach(() => {
         let fs = {'existsSync': sinon.stub().returns(false)};
-        fs.existsSync.onCall(5).returns(true);
         fs.existsSync.onCall(6).returns(true);
+        fs.existsSync.onCall(7).returns(true);
         mock('fs', fs);
         pyvenv = mock.reRequire('../../lib/pyvenv');
         ret = pyvenv(testCommand, ['test', 'test2']);
