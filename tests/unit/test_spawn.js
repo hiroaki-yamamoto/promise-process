@@ -49,6 +49,7 @@
           expect(spawn.callCount).to.equal(1);
           expect(spawn.calledWithExactly(expectedCommand, undefined, {
             'shell': true,
+            'stdio': [process.stdin, 'pipe', 'pipe'],
           })).is.true;
         });
         it('Should assign stdout data event', () => {
@@ -72,12 +73,14 @@
       const testCommand = 'jugemjugemgokohnosurikire';
       const testArgs = ['--kayjare=\'suygyo\'', '--soygyo=\'matsu\''];
       beforeEach(() => {
-        promiseProcess(testCommand, testArgs, {'shell': false});
+        promiseProcess(
+          testCommand, testArgs, {'shell': false, 'stdio': 'pipe'}
+        );
       });
       it('Should call spawn with the command', () => {
         expect(spawn.callCount).to.equal(1);
         expect(spawn.calledWithExactly(testCommand, testArgs, {
-          'shell': false,
+          'shell': false, 'stdio': 'pipe',
         })).is.true;
       });
       it('Should assign stdout data event', () => {
