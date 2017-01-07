@@ -47,7 +47,7 @@
         });
         it('Should call spawn with the command', () => {
           expect(spawn.callCount).to.equal(1);
-          expect(spawn.calledWithExactly(expectedCommand, undefined, {
+          expect(spawn.calledWithExactly(expectedCommand, [], {
             'shell': true,
             'stdio': ['inherit', 'pipe', 'pipe'],
           })).is.true;
