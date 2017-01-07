@@ -29,6 +29,7 @@ deploy:
         hVQZou4aVrEkeEefnjrdYt/ZWUy+DZ1JbBEnmnj0yX+N37UUCt4Qg=
     on:
       tags: true
+      node: node
   - provider: releases
     file: ${HOME}/simple-process-${TRAVIS_TAG}.tar.gz
     skip_cleanup: true
@@ -47,3 +48,4 @@ deploy:
         osISG5GqpqzMzENYr3+MOD+rWGYRzFXPGOhy8kBYVllRnHwkSFWBo=
     on:
       tags: true
+      node: node

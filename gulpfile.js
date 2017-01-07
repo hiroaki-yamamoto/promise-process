@@ -19,7 +19,7 @@
     );
   });
 
-  g.task('test', ['stylecheck', 'test.pre'], () => {
+  g.task('test', ['stylecheck'], () => {
     g.src(['tests/**/*.js']).pipe(plumber({
       'errorHandler': notify.onError('<%= error.message %>'),
     })).pipe(mocha()).pipe(

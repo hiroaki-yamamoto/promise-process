@@ -49,7 +49,7 @@
           expect(spawn.callCount).to.equal(1);
           expect(spawn.calledWithExactly(expectedCommand, undefined, {
             'shell': true,
-            'stdio': [process.stdin, 'pipe', 'pipe'],
+            'stdio': ['inherit', 'pipe', 'pipe'],
           })).is.true;
         });
         it('Should assign stdout data event', () => {
