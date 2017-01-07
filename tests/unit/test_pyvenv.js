@@ -30,10 +30,10 @@
       });
       it('Should call processCall with proper args.', () => {
         expect(promiseProcessMock.calledOnce).to.be.true;
-        expect(promiseProcessMock.calledWithExactly([
-          path.join(process.cwd(), 'venv', 'bin', 'activate'),
+        expect(promiseProcessMock.getCall(0).args[0]).to.eql([
+          `. ${path.join(process.cwd(), 'venv', 'bin', 'activate')}`,
           testCommand, 'deactivate',
-        ]));
+        ]);
       });
       it('The return value should be an instance of promise', () => {
         expect(ret).to.eql({});
@@ -56,10 +56,10 @@
       });
       it('Should call processCall with proper args.', () => {
         expect(promiseProcessMock.calledOnce).to.be.true;
-        expect(promiseProcessMock.calledWithExactly([].concat(
-          path.join(process.cwd(), 'venv', 'bin', 'activate'),
+        expect(promiseProcessMock.getCall(0).args[0]).to.eql([].concat(
+          `. ${path.join(process.cwd(), 'venv', 'bin', 'activate')}`,
           testCommand, 'deactivate'
-        )));
+        ));
       });
       it('The return value should be an instance of promise', () => {
         expect(ret).to.eql({});
@@ -78,10 +78,10 @@
       });
       it('Should call processCall with proper args.', () => {
         expect(promiseProcessMock.calledOnce).to.be.true;
-        expect(promiseProcessMock.calledWithExactly([
-          path.join('test', 'bin', 'activate'),
+        expect(promiseProcessMock.getCall(0).args[0]).to.eql([
+          `. ${path.join('test', 'bin', 'activate')}`,
           testCommand, 'deactivate',
-        ]));
+        ]);
       });
       it('The return value should be an instance of promise', () => {
         expect(ret).to.eql({});
@@ -100,9 +100,10 @@
       });
       it('Should call processCall with proper args.', () => {
         expect(promiseProcessMock.calledOnce).to.be.true;
-        expect(promiseProcessMock.calledWithExactly([
-          path.join('test', 'bin', 'activate'), testCommand, 'deactivate',
-        ]));
+        expect(promiseProcessMock.getCall(0).args[0]).to.eql([
+          `. ${path.join('test', 'bin', 'activate')}`,
+          testCommand, 'deactivate',
+        ]);
       });
       it('The return value should be an instance of promise', () => {
         expect(ret).to.eql({});
