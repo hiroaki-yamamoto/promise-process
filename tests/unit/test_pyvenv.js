@@ -33,7 +33,7 @@
         expect(promiseProcessMock.getCall(0).args).to.eql([[
           `. ${path.join(process.cwd(), 'venv', 'bin', 'activate')}`,
           testCommand, 'deactivate',
-        ]]);
+        ], [], {}]);
       });
       it('The return value should be an instance of promise', () => {
         expect(ret).to.eql({});
@@ -59,7 +59,7 @@
         expect(promiseProcessMock.getCall(0).args).to.eql([[].concat(
           `. ${path.join(process.cwd(), 'venv', 'bin', 'activate')}`,
           testCommand, 'deactivate'
-        )]);
+        ), [], {}]);
       });
       it('The return value should be an instance of promise', () => {
         expect(ret).to.eql({});
@@ -81,7 +81,7 @@
         expect(promiseProcessMock.getCall(0).args).to.eql([[
           `. ${path.join('test', 'bin', 'activate')}`,
           testCommand, 'deactivate',
-        ]]);
+        ], [], {}]);
       });
       it('The return value should be an instance of promise', () => {
         expect(ret).to.eql({});
@@ -103,7 +103,7 @@
         expect(promiseProcessMock.getCall(0).args).to.eql([[
           `. ${path.join('test', 'bin', 'activate')}`,
           testCommand, 'deactivate',
-        ]]);
+        ], [], {}]);
       });
       it('The return value should be an instance of promise', () => {
         expect(ret).to.eql({});

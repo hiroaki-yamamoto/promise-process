@@ -14,10 +14,11 @@
       stdout = {'on': sinon.spy()};
       stderr = {'on': sinon.spy()};
       eventObject = {
-        'on': sinon.spy(),
+        'on': sinon.stub(),
         'stdout': stdout,
         'stderr': stderr,
       };
+      eventObject.on.withArgs('close').callsArgWith(1, 0);
       spawn = sinon.stub().returns(eventObject);
       mock('child_process', {'spawn': spawn});
       promiseProcess = mock.reRequire('../../index');
@@ -43,13 +44,12 @@
       describe(`${item.name} command`, () => {
         const expectedCommand = [].concat(item.command).join('&&');
         beforeEach(() => {
-          promiseProcess(item.command);
+          return promiseProcess(item.command);
         });
         it('Should call spawn with the command', () => {
           expect(spawn.callCount).to.equal(1);
           expect(spawn.calledWithExactly(expectedCommand, [], {
             'shell': true,
-            'stdio': ['inherit', 'pipe', 'pipe'],
           })).is.true;
         });
         it('Should assign stdout data event', () => {
@@ -69,11 +69,31 @@
       });
     }
 
+    describe('stdio without pipeline tests', () => {
+      const command = 'jugemjugemgokohnosurikire';
+      beforeEach(() => {
+        mock.stopAll();
+        delete eventObject.stdout;
+        delete eventObject.stderr;
+        spawn = sinon.stub().returns(eventObject);
+        mock('child_process', {'spawn': spawn});
+        promiseProcess = mock.reRequire('../../index');
+        return promiseProcess(command);
+      });
+      afterEach(() => {
+        mock.stopAll();
+      });
+      it('Should call spawn with the command', () => {
+        expect(spawn.callCount).to.equal(1);
+        expect(spawn.calledWithExactly(command, [], {'shell': true})).is.true;
+      });
+    });
+
     describe('Non-shell mode with commandline arguments', () => {
       const testCommand = 'jugemjugemgokohnosurikire';
       const testArgs = ['--kayjare=\'suygyo\'', '--soygyo=\'matsu\''];
       beforeEach(() => {
-        promiseProcess(
+        return promiseProcess(
           testCommand, testArgs, {'shell': false, 'stdio': 'pipe'}
         );
       });
