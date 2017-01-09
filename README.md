@@ -178,8 +178,8 @@ module.exports = () => {
 
 ### Contribution
 
-If you found bugs, feel free to create an issue at [github issues tracker],
-but sending [Pull requests] is more appreciated. When you send Pull Requests,
+If you found bugs, feel free to create issues at [github issues tracker],
+but sending [Pull Requests] is more appreciated. When you send Pull Requests,
 don't forget to add your name to `contributors` list in [package.json].
 
 [github issues tracker]: https://github.com/hiroaki-yamamoto/simple-process/issues
