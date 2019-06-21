@@ -1,6 +1,6 @@
 {
   "name": "simple-process",
-  "version": "1.0.14",
+  "version": "0.0.0",
   "description": "Child process that uses Promise Object",
   "main": "index.js",
   "scripts": {
