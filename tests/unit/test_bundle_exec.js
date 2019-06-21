@@ -24,7 +24,9 @@
       it('The process should be called with proper parameters', () => {
         expect(processMock.calledOnce).to.be.true;
         expect(
-          processMock.calledWithExactly([`bundle exec ${testCommand}`], [], {})
+            processMock.calledWithExactly(
+                [`bundle exec ${testCommand}`], [], {}
+            )
         ).to.be.true;
       });
       it('The return value should be proper', () => {
@@ -46,7 +48,7 @@
       it('The process should be called with proper parameters', () => {
         expect(processMock.calledOnce).to.be.true;
         expect(
-          processMock.calledWithExactly(expectedResult, [], {})
+            processMock.calledWithExactly(expectedResult, [], {})
         ).to.be.true;
       });
       it('The return value should be proper', () => {

@@ -34,8 +34,8 @@
     describe('Unknown command case on non-shell mode', () => {
       it('Should be rejected with Error', (done) => {
         processPromise(
-          'jugemjugemgokohnosurikire',
-          ['--kayjare=\'suygyo\''], {'shell': false}
+            'jugemjugemgokohnosurikire',
+            ['--kayjare=\'suygyo\''], {'shell': false}
         ).then(() => {
           done(new Error('Should raise an error in this case.'));
         }).catch((errObj) => {

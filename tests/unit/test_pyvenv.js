@@ -21,7 +21,7 @@
     describe('Command invokation without additional pyvenv', () => {
       let ret;
       beforeEach(() => {
-        let fs = {'existsSync': sinon.stub().returns(false)};
+        const fs = {'existsSync': sinon.stub().returns(false)};
         fs.existsSync.onFirstCall().returns(true);
         fs.existsSync.onSecondCall().returns(true);
         mock('fs', fs);
@@ -47,7 +47,7 @@
       ];
       let ret;
       beforeEach(() => {
-        let fs = {'existsSync': sinon.stub().returns(false)};
+        const fs = {'existsSync': sinon.stub().returns(false)};
         fs.existsSync.onFirstCall().returns(true);
         fs.existsSync.onSecondCall().returns(true);
         mock('fs', fs);
@@ -57,8 +57,8 @@
       it('Should call processCall with proper args.', () => {
         expect(promiseProcessMock.calledOnce).to.be.true;
         expect(promiseProcessMock.getCall(0).args).to.eql([[].concat(
-          `. ${path.join(process.cwd(), 'venv', 'bin', 'activate')}`,
-          testCommand, 'deactivate'
+            `. ${path.join(process.cwd(), 'venv', 'bin', 'activate')}`,
+            testCommand, 'deactivate'
         ), [], {}]);
       });
       it('The return value should be an instance of promise', () => {
@@ -69,7 +69,7 @@
     describe('Command invokation with additional pyvenv', () => {
       let ret;
       beforeEach(() => {
-        let fs = {'existsSync': sinon.stub().returns(false)};
+        const fs = {'existsSync': sinon.stub().returns(false)};
         fs.existsSync.onCall(6).returns(true);
         fs.existsSync.onCall(7).returns(true);
         mock('fs', fs);
@@ -91,7 +91,7 @@
     describe('Command invokation with overwriting pyvenv', () => {
       let ret;
       beforeEach(() => {
-        let fs = {'existsSync': sinon.stub().returns(false)};
+        const fs = {'existsSync': sinon.stub().returns(false)};
         fs.existsSync.onFirstCall().returns(true);
         fs.existsSync.onSecondCall().returns(true);
         mock('fs', fs);

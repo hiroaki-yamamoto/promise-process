@@ -40,7 +40,7 @@
       },
     ];
 
-    for (let item of testData) {
+    for (const item of testData) {
       describe(`${item.name} command`, () => {
         const expectedCommand = [].concat(item.command).join('&&');
         beforeEach(() => {
@@ -60,12 +60,12 @@
         });
         it('Should call eventObject.on ' +
            'twice with error/close argument.', () => {
-             expect(
-               eventObject.on.args.map((el) => {
-                 return el[0];
-               })
-             ).to.eql(['error', 'close']);
-         });
+          expect(
+              eventObject.on.args.map((el) => {
+                return el[0];
+              })
+          ).to.eql(['error', 'close']);
+        });
       });
     }
 
@@ -94,7 +94,7 @@
       const testArgs = ['--kayjare=\'suygyo\'', '--soygyo=\'matsu\''];
       beforeEach(() => {
         return promiseProcess(
-          testCommand, testArgs, {'shell': false, 'stdio': 'pipe'}
+            testCommand, testArgs, {'shell': false, 'stdio': 'pipe'}
         );
       });
       it('Should call spawn with the command', () => {
@@ -111,12 +111,12 @@
       });
       it('Should call eventObject.on ' +
          'twice with error/close argument.', () => {
-           expect(
-             eventObject.on.args.map((el) => {
-               return el[0];
-             })
-           ).to.eql(['error', 'close']);
-       });
+        expect(
+            eventObject.on.args.map((el) => {
+              return el[0];
+            })
+        ).to.eql(['error', 'close']);
+      });
     });
   });
 })();

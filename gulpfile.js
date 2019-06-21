@@ -12,24 +12,24 @@
   });
 
   g.task('stylecheck', () => {
-    g.src(['lib/**/*.js', 'tests/**/*.js', 'index.js']).pipe(plumber({
+    return g.src(['lib/**/*.js', 'tests/**/*.js', 'index.js']).pipe(plumber({
       'errorHandler': notify.onError('<%= error.message %>'),
     })).pipe(eslint()).pipe(eslint.format()).pipe(
       eslint.failAfterError()
     );
   });
 
-  g.task('test', ['stylecheck'], () => {
-    g.src(['tests/**/*.js']).pipe(plumber({
+  g.task('test', g.series('stylecheck', () => {
+    return g.src(['tests/**/*.js']).pipe(plumber({
       'errorHandler': notify.onError('<%= error.message %>'),
     })).pipe(mocha()).pipe(
       cov.writeReports()
     ).pipe(
       cov.enforceThresholds({'thresholds': 70})
     );
-  });
+  }));
 
-  g.task('default', ['test'], () => {
-    g.watch(['lib/**/*.js', 'tests/**/*.js', 'index.js'], ['test']);
-  });
+  g.task('default', g.series('test', () => {
+    g.watch(['lib/**/*.js', 'tests/**/*.js', 'index.js'], 'test');
+  }));
 })(require);
