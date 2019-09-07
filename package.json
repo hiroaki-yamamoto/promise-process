@@ -30,7 +30,7 @@
     "codeclimate-test-reporter": "^0.5.1",
     "coveralls": "^3.0.4",
     "eslint": "^6.0.0",
-    "eslint-config-google": "^0.13.0",
+    "eslint-config-google": "^0.14.0",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
     "gulp-istanbul": "^1.1.3",
